@@ -1,4 +1,4 @@
 import {AppRegistry,} from 'react-native';
-import App from './src/Components/App/AppComponent';
+import AutoTexter from './src/components/App';
 
-AppRegistry.registerComponent('autotexter', () => App);
+AppRegistry.registerComponent('autotexter', () => AutoTexter);
