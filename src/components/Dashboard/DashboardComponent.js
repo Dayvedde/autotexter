@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import dashboard from '../../styles/dashboard';
 
 class Dashboard extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
+            <View style={dashboard.container}>
+                <Text style={dashboard.welcome}>
                     Welcome to AutoTexter
                 </Text>
-                <Text style={styles.instructions}>
+                <Text style={dashboard.instructions}>
                     To get started, edit index.android.js
                 </Text>
-                <Text style={styles.instructions}>
+                <Text style={dashboard.instructions}>
                     Double tap R on your keyboard to reload,{'\n'}
                     Shake or press menu button for dev menu
                 </Text>
@@ -19,24 +20,5 @@ class Dashboard extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-});
 
 export default Dashboard;
