@@ -1,18 +1,28 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import dashboard from '../../styles/dashboard';
-import {MKTextField, MKColor} from 'react-native-material-kit';
+import SmsAndroid from 'react-native-sms-android';
 
 class Dashboard extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             contacts: []
         }
     }
 
+    componentWillMount() {
+        
+    }
+
     render() {
-        return false;
+        return (
+            <View>
+                <Text>
+
+                </Text>
+            </View>
+        );
     }
 }
 
