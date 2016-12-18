@@ -4,6 +4,7 @@ import styles from '../../styles/dashboard';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../styles/colors';
+import {Actions} from 'react-native-router-flux';
 
 import SmsAndroid from 'react-native-sms-android';
 
@@ -27,7 +28,7 @@ class Dashboard extends Component {
                     <ActionButton.Item
                         buttonColor={colors.actionButtonItem}
                         title="Add Contact"
-                        onPress={() => console.log("notes tapped!")}
+                        onPress={() => Actions.addContact()}
                     >
                         <Icon name="md-person-add" style={styles2.actionButtonIcon}/>
                     </ActionButton.Item>
