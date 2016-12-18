@@ -5,13 +5,13 @@ import SplashScreenComponent from './SplashScreen/SplashScreenComponent';
 import DashboardComponent from './Dashboard/DashboardComponent';
 import AddContactComponent from './AddContact/AddContactComponent';
 
-import navbarStyle from '../styles/navbar';
+import mdStyle from '../styles/material-design';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <Scene key="root" hideNavBar navigationBarStyle={navbarStyle}>
+                <Scene key="root" hideNavBar navigationBarStyle={mdStyle.navBar}>
                     <Scene key="splashscreen" component={SplashScreenComponent}/>
                     <Scene initial={true} key="dashboard" component={DashboardComponent} title="Dashboard"
                            hideNavBar={false}
