@@ -1,5 +1,9 @@
-const red500 = '#E91E63';
+const red500 = '#F44336';
+const cyanA700 = '#00B8D4';
+const cyanA400Rgba = 'rgba(0, 229, 255, 1.0)';
 
 export default palette = {
-    primary: red500
+    primary: red500,
+    actionButtonItem: cyanA700,
+    actionButtonRgba: cyanA400Rgba
 }
