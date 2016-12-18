@@ -17,6 +17,7 @@
     "react-native-vector-icons": "^3.0.0",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
+    "redux-form": "^6.3.2",
     "redux-saga": "^0.13.0"
   },
   "jest": {
