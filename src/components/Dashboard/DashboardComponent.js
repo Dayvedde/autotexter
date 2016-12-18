@@ -1,23 +1,16 @@
 import React, {Component} from 'react';
 import {Text, View, TouchableOpacity} from 'react-native';
-import dashboard from '../../styles/dashboard';
+import s from '../../styles/dashboard';
 import SmsAndroid from 'react-native-sms-android';
 
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            contacts: []
-        }
     }
-
 
     render() {
         return (
-            <View>
-                <Text>
-
-                </Text>
+            <View style={s.container}>
             </View>
         );
     }

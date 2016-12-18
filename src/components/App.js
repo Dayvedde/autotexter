@@ -2,14 +2,15 @@ import React, {Component} from 'react';
 import {Scene, Router, ActionConst} from 'react-native-router-flux';
 import SplashScreenComponent from './SplashScreen/SplashScreenComponent';
 import DashboardComponent from './Dashboard/DashboardComponent';
+import navbarStyle from '../styles/navbar';
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <Scene key="root" hideNavBar>
-                    <Scene key="splashscreen" component={SplashScreenComponent} initial={true}/>
-                    <Scene key="dashboard" component={DashboardComponent} title="Dashboard" hideNavBar={false}
+                <Scene key="root" hideNavBar navigationBarStyle={navbarStyle}>
+                    <Scene key="splashscreen" component={SplashScreenComponent} />
+                    <Scene initial={true} key="dashboard" component={DashboardComponent} title="Dashboard" hideNavBar={false}
                            type={ActionConst.RESET}/>
                 </Scene>
             </Router>
