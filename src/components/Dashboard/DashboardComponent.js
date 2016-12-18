@@ -11,9 +11,6 @@ class Dashboard extends Component {
         }
     }
 
-    componentWillMount() {
-        
-    }
 
     render() {
         return (
