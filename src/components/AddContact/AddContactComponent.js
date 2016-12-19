@@ -1,18 +1,42 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {View, TextInput} from 'react-native';
+import {View} from 'react-native';
 import mdStyles from '../../styles/material-design';
 import {reduxForm, Field} from 'redux-form';
+import {Button} from 'react-native-elements';
+import TextInput from '../Form/TextInput/TextInputComponent';
 
 class AddContactComponent extends Component {
+    handleSubmit(){
+        const contact = {
+            name: this.props.name,
+            phoneNumber: this.props.phoneNumber
+        };
+        this.props.addContact(contact);
+    }
+
     render() {
         return (
             <View style={mdStyles.container}>
                 <Field
-                    name="email"
+                    name="name"
                     component={TextInput}
-                    placeholder="Email"
+                    placeholder="Name"
                 />
+                <Field
+                    name="phoneNumber"
+                    component={TextInput}
+                    placeholder="Phone Number"
+                />
+                <Button
+                    large
+                    raised
+                    borderRadius={16}
+                    iconRight
+                    onPress={()=>this.handleSubmit()}
+                    icon={{name: 'code'}}
+                    title='SAVE'
+                />
+
             </View>
         )
     }
@@ -21,6 +45,5 @@ class AddContactComponent extends Component {
 AddContactComponent = reduxForm({
     form: 'loginForm'
 })(AddContactComponent);
-
 
 export default AddContactComponent;

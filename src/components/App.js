@@ -3,7 +3,7 @@ import {Scene, Router, ActionConst} from 'react-native-router-flux';
 
 import SplashScreenComponent from './SplashScreen/SplashScreenComponent';
 import DashboardComponent from './Dashboard/DashboardComponent';
-import AddContactComponent from './AddContact/AddContactComponent';
+import AddContactContainer from './AddContact/AddContactContainer';
 
 import mdStyle from '../styles/material-design';
 
@@ -16,7 +16,7 @@ class App extends Component {
                     <Scene initial={true} key="dashboard" component={DashboardComponent} title="Dashboard"
                            hideNavBar={false}
                            type={ActionConst.RESET}/>
-                    <Scene key="addContact" title="Add Contact" component={AddContactComponent}/>
+                    <Scene key="addContact" title="Add Contact" component={AddContactContainer}/>
 
                 </Scene>
             </Router>
