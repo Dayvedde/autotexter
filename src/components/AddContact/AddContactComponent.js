@@ -4,9 +4,10 @@ import mdStyles from '../../styles/material-design';
 import {reduxForm, Field} from 'redux-form';
 import {Button} from 'react-native-elements';
 import TextInput from '../Form/TextInput/TextInputComponent';
+import colors from '../../styles/colors';
 
 class AddContactComponent extends Component {
-    handleSubmit(){
+    handleSubmit() {
         const contact = {
             name: this.props.name,
             phoneNumber: this.props.phoneNumber
@@ -21,21 +22,24 @@ class AddContactComponent extends Component {
                     name="name"
                     component={TextInput}
                     placeholder="Name"
+                    props={{iconName: 'person'}}
                 />
                 <Field
                     name="phoneNumber"
                     component={TextInput}
                     placeholder="Phone Number"
+                    props={{iconName: 'phone'}}
                 />
-                <Button
-                    large
-                    raised
-                    borderRadius={16}
-                    iconRight
-                    onPress={()=>this.handleSubmit()}
-                    icon={{name: 'code'}}
-                    title='SAVE'
-                />
+                <View style={mdStyles.buttonContainer}>
+                    <Button
+                        raised
+                        borderRadius={2}
+                        onPress={() => this.handleSubmit()}
+                        title='SAVE'
+                        buttonStyle={mdStyles.button}
+                        backgroundColor={colors.activeButton}
+                    />
+                </View>
 
             </View>
         )
