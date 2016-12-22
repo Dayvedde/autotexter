@@ -3,7 +3,7 @@ import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
 import styles from '../../styles/dashboard';
 import mdStyles from '../../styles/material-design';
 import ActionButton from 'react-native-action-button';
-import Icon from 'react-native-vector-icons/Ionicons';
+import {Icon} from 'react-native-elements';
 import colors from '../../styles/colors';
 import {Actions} from 'react-native-router-flux';
 
@@ -31,20 +31,12 @@ class Dashboard extends Component {
                         title="Add Contact"
                         onPress={() => Actions.addContact()}
                     >
-                        <Icon name="md-person-add" style={styles2.actionButtonIcon}/>
+                        <Icon name="person-add" color={colors.white} size={24}/>
                     </ActionButton.Item>
                 </ActionButton>
             </View>
         );
     }
 }
-
-const styles2 = StyleSheet.create({
-    actionButtonIcon: {
-        fontSize: 20,
-        height: 22,
-        color: 'white',
-    },
-});
 
 export default Dashboard;
