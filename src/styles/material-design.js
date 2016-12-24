@@ -3,7 +3,6 @@ import colors from './colors';
 
 export default StyleSheet.create({
     container: {
-        marginTop: 56,
         padding: 16,
         flex: 1,
     },

@@ -1,14 +1,23 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
-import mdStyles from '../../../styles/material-design';
-
+import styles from '../../../styles/contact-row';
+import commonStyles from '../../../styles/common';
+import {Icon} from 'react-native-elements';
 
 class ContactRowComponent extends Component {
     render() {
-        console.log("In rows", this.props);
         return (
-            <View>
-                <Text>{this.props.contact.name}</Text>
+            <View style={styles.container}>
+                <View style={[styles.iconContainer, commonStyles.center]}>
+                    <Icon name='face' size={42}/>
+                </View>
+                <View style={styles.textContainer}>
+                    <Text style={styles.nameText}>{this.props.contact.name}</Text>
+                    <Text>Rules:</Text>
+                </View>
+                <View style={styles.menuContainer}>
+                    <Icon name='more-vert' size={32}/>
+                </View>
             </View>
         )
     }

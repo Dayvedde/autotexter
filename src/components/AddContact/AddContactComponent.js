@@ -5,6 +5,7 @@ import {reduxForm, Field} from 'redux-form';
 import {Button} from 'react-native-elements';
 import TextInput from '../Form/TextInput/TextInputComponent';
 import colors from '../../styles/colors';
+import commonStyles from '../../styles/common';
 
 class AddContactComponent extends Component {
     handleSubmit() {
@@ -17,7 +18,7 @@ class AddContactComponent extends Component {
 
     render() {
         return (
-            <View style={mdStyles.container}>
+            <View style={commonStyles.sceneContainer}>
                 <Field
                     name="name"
                     component={TextInput}

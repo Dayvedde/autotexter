@@ -7,6 +7,7 @@ import SmsAndroid from 'react-native-sms-android';
 
 import ContactsListContainer from './ContactsList/ContactsListContainer';
 import styles from '../../styles/dashboard';
+import commonStyles from '../../styles/common';
 import mdStyles from '../../styles/material-design';
 import colors from '../../styles/colors';
 
@@ -18,10 +19,8 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <View style={mdStyles.container}>
-                <View>
-                    <ContactsListContainer />
-                </View>
+            <View style={commonStyles.sceneContainer}>
+                <ContactsListContainer />
                 <ActionButton
                     offsetX={16}
                     offsetY={0}
