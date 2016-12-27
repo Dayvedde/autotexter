@@ -23,23 +23,7 @@ const initialState = {
         {
             name: 'Barak Obama',
             phoneNumber: '6471230000'
-        },
-        {
-            name: 'Shalalala mama',
-            phoneNumber: '6471230000'
-        },
-        {
-            name: 'David Lai',
-            phoneNumber: '6471230000'
-        },
-        {
-            name: 'David Lai',
-            phoneNumber: '6471230000'
-        },
-        {
-            name: 'David Lai',
-            phoneNumber: '6471230000'
-        },
+        }
     ]
 };
 

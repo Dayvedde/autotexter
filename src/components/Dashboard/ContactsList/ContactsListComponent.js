@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {View, ListView} from 'react-native';
-import mdStyles from '../../../styles/material-design';
 import ContactRowComponent from './ContactRowComponent';
 
 class ContactsListComponent extends Component {
@@ -17,7 +16,6 @@ class ContactsListComponent extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log("new props", nextProps);
         const ds = new ListView.DataSource({
             rowHasChanged: (r1, r2) => r1 !== r2
         });
@@ -28,7 +26,6 @@ class ContactsListComponent extends Component {
     }
 
     renderRow(data) {
-        console.log("Data", data);
         return (
             <ContactRowComponent contact={data} />
         );
