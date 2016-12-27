@@ -3776,6 +3776,10 @@ react-native-material-kit@^0.3.3:
   dependencies:
     ramda "~0.21.0"
 
+react-native-popup-menu@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-native-popup-menu/-/react-native-popup-menu-0.6.1.tgz#fe1b211340787c8e987dfc7da6da619c8fec91d5"
+
 react-native-router-flux@^3.37.0:
   version "3.37.0"
   resolved "https://registry.yarnpkg.com/react-native-router-flux/-/react-native-router-flux-3.37.0.tgz#18e8fd3e1e6dbdc4d8340cd47313c28bb9bb1caf"

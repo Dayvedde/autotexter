@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import styles from '../../../styles/contact-row';
 import commonStyles from '../../../styles/common';
 import {Icon} from 'react-native-elements';
+import Menu, {MenuOptions, MenuOption, MenuTrigger} from 'react-native-popup-menu';
 
 class ContactRowComponent extends Component {
     render() {
@@ -16,7 +17,15 @@ class ContactRowComponent extends Component {
                     <Text>Rules:</Text>
                 </View>
                 <View style={styles.menuContainer}>
-                    <Icon name='more-vert' size={32}/>
+                    <Menu>
+                        <MenuTrigger>
+                            <Icon name='more-vert' size={32}/>
+                        </MenuTrigger>
+                        <MenuOptions>
+                            <MenuOption value={1} text="Edit Rules"/>
+                            <MenuOption value={2} text="Delete"/>
+                        </MenuOptions>
+                    </Menu>
                 </View>
             </View>
         )
