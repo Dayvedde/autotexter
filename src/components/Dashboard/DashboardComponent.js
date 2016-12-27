@@ -3,14 +3,10 @@ import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import ActionButton from 'react-native-action-button';
 import {Icon} from 'react-native-elements';
-import SmsAndroid from 'react-native-sms-android';
 
 import ContactsListContainer from './ContactsList/ContactsListContainer';
-import styles from '../../styles/dashboard';
 import commonStyles from '../../styles/common';
-import mdStyles from '../../styles/material-design';
 import colors from '../../styles/colors';
-
 
 class Dashboard extends Component {
     constructor(props) {

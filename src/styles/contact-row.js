@@ -31,7 +31,7 @@ export default StyleSheet.create({
 export const menuContainer = {
     menuOptions: {
         optionsContainer: {
-            marginTop:16,
+            marginTop: 16,
             marginLeft: -16,
             paddingTop: 8,
             paddingBottom: 8,
