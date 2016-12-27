@@ -5,6 +5,11 @@ const mapStateToProp = (state) => ({
     contacts: state.contacts
 });
 
+const mapDispatchToProp = (dispatch) => ({
+   deleteContact: (id) => dispatch({type: 'DELETE_CONTACT', payload: id})
+});
+
 export default connect(
-    mapStateToProp
+    mapStateToProp,
+    mapDispatchToProp
 )(ContactsListComponent);

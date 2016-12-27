@@ -32,6 +32,10 @@ function contacts(state = initialState, action) {
                 ...state,
                 action.payload
             ];
+        case 'DELETE_CONTACT':
+            return state.filter((contact) => {
+                return contact.id != action.payload
+            });
         default:
             return state;
     }

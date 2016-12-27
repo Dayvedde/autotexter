@@ -16,19 +16,25 @@ class ContactRowComponent extends Component {
                 </View>
                 <View style={styles.textContainer}>
                     <Text style={styles.nameText}>{this.props.contact.name}</Text>
-                    <Text>Rules:</Text>
+                    <Text>{`${this.props.contact.rules.length} rule(s)`}</Text>
                 </View>
                 <Menu>
                     <MenuTrigger customStyles={menuContainer.menuTrigger}>
                         <Icon name='more-vert' size={32}/>
                     </MenuTrigger>
                     <MenuOptions customStyles={menuContainer.menuOptions}>
-                        <MenuOption value={1}
-                                    text="Edit Rules"
-                                    onSelect={()=>Actions.editRules({
-                                        contact: this.props.contact
-                                    })} />
-                        <MenuOption value={2} text="Delete"/>
+                        <MenuOption
+                            value={1}
+                            text="Edit Rules"
+                            onSelect={() => Actions.editRules({
+                                contact: this.props.contact
+                            })}
+                        />
+                        <MenuOption
+                            value={2}
+                            text="Delete"
+                            onSelect={() => this.props.deleteContact(this.props.contact.id)}
+                        />
                     </MenuOptions>
                 </Menu>
             </View>

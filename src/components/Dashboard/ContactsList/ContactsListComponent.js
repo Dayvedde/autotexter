@@ -27,7 +27,10 @@ class ContactsListComponent extends Component {
 
     renderRow(data) {
         return (
-            <ContactRowComponent contact={data} />
+            <ContactRowComponent
+                contact={data}
+                deleteContact={(id) => this.props.deleteContact(id)}
+            />
         );
     }
 
