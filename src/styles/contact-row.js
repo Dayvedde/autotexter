@@ -17,7 +17,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
         flex: 1
     },
-    menuContainer: {
+    menuTriggerContainer: {
         height: rowHeight,
         width: 56,
         justifyContent: 'center',
@@ -25,5 +25,35 @@ export default StyleSheet.create({
     },
     nameText: {
         fontSize: 16
-    }
+    },
 });
+
+export const menuContainer = {
+    menuOptions: {
+        optionsContainer: {
+            marginTop:16,
+            marginLeft: -16,
+            paddingTop: 8,
+            paddingBottom: 8,
+            width: 112,
+        },
+        optionWrapper: {
+            width: 112,
+            height: 48,
+            paddingLeft: 16,
+            paddingRight: 16,
+            justifyContent: 'center',
+        },
+        optionText: {
+            fontSize: 16
+        }
+    },
+    menuTrigger: {
+        triggerWrapper: {
+            height: rowHeight,
+            width: 56,
+            justifyContent: 'center',
+            alignItems: 'center',
+        }
+    }
+};
