@@ -1,15 +1,18 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
-import mdStyles from '../../styles/material-design';
 import {reduxForm, Field} from 'redux-form';
 import {Button} from 'react-native-elements';
+import uuid from 'react-native-uuid';
+
 import TextInput from '../Form/TextInput/TextInputComponent';
 import colors from '../../styles/colors';
 import commonStyles from '../../styles/common';
+import mdStyles from '../../styles/material-design';
 
 class AddContactComponent extends Component {
     handleSubmit() {
         const contact = {
+            id: uuid.v4(),
             name: this.props.name,
             phoneNumber: this.props.phoneNumber
         };
