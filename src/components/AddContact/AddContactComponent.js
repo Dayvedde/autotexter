@@ -14,7 +14,8 @@ class AddContactComponent extends Component {
         const contact = {
             id: uuid.v4(),
             name: this.props.name,
-            phoneNumber: this.props.phoneNumber
+            phoneNumber: this.props.phoneNumber,
+            rules: []
         };
         this.props.addContact(contact);
     }
