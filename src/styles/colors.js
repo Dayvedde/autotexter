@@ -8,6 +8,6 @@ export default palette = {
     primary: red500,
     actionButtonItem: cyanA700,
     actionButtonRgba: cyanA400Rgba,
-    activeButton: cyanA400,
+    activeButton: cyanA700,
     white: '#ffffff'
 }
