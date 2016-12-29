@@ -3701,10 +3701,6 @@ qs@~6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.0.tgz#f403b264f23bc01228c74131b407f18d5ea5d442"
 
-ramda@~0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.21.0.tgz#a001abedb3ff61077d4ff1d577d44de77e8d0a35"
-
 random-bytes@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
@@ -3774,11 +3770,9 @@ react-native-experimental-navigation@0.26.x:
     fbjs "^0.8.1"
     react-addons-pure-render-mixin "^15.0.2"
 
-react-native-material-kit@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/react-native-material-kit/-/react-native-material-kit-0.3.3.tgz#5471c7171c40a2d27cf03cb3d1bdacd54b69e00a"
-  dependencies:
-    ramda "~0.21.0"
+react-native-maps@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.12.2.tgz#f13603ab908acee6e4afe8978b65e6138c30f50b"
 
 react-native-popup-menu@^0.6.1:
   version "0.6.1"
