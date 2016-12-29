@@ -6,6 +6,7 @@ import SplashScreenComponent from './SplashScreen/SplashScreenComponent';
 import DashboardContainer from './Dashboard/DashboardContainer';
 import AddContactContainer from './AddContact/AddContactContainer';
 import EditRulesComponent from './EditRules/EditRulesComponent';
+import AddRuleContainer from './AddRule/AddRuleContainer';
 
 import mdStyle from '../styles/material-design';
 
@@ -20,7 +21,8 @@ class App extends Component {
                                hideNavBar={false}
                                type={ActionConst.RESET}/>
                         <Scene key="addContact" title="Add Contact" component={AddContactContainer}/>
-                        <Scene key="editRules" title="Rules" component={EditRulesComponent}/>
+                        <Scene key="editRules" component={EditRulesComponent}/>
+                        <Scene key="addRule" title="Add Rule" component={AddRuleContainer}/>
                     </Scene>
                 </Router>
             </MenuContext>

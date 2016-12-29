@@ -56,6 +56,11 @@ class RulesListComponent extends Component {
                         buttonStyle={mdStyles.button}
                         backgroundColor={colors.activeButton}
                         fontWeight="500"
+                        onPress={() => {
+                            Actions.addRule({
+                                contact: this.props.contact
+                            })
+                        }}
                     />
                 </View>
             </View>
