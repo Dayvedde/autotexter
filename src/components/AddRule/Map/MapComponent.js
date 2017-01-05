@@ -10,8 +10,8 @@ class MapComponent extends Component {
                 <MapView
                     style={mapStyles.map}
                     region={{
-                        latitude: 37.78825,
-                        longitude: -122.4324,
+                        latitude: 43,
+                        longitude: -79,
                         latitudeDelta: 0.0922,
                         longitudeDelta: 0.0421,
                     }}

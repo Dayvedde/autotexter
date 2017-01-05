@@ -5,7 +5,7 @@ import {reduxForm, Field} from 'redux-form';
 import commonStyles from '../../styles/common';
 import TextInput from '../Form/TextInput/TextInputComponent';
 import DropdownInputComponent from '../Form/DropdownInput/DropdownInputComponent';
-import MapComponent from './Map/MapComponent';
+import MapContainer from './Map/MapContainer';
 
 class AddRuleComponent extends Component {
 
@@ -29,7 +29,7 @@ class AddRuleComponent extends Component {
                     props={{iconName: 'description'}}
                 />
 
-                <MapComponent />
+                <MapContainer />
 
             </View>
         );

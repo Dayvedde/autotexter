@@ -3,7 +3,16 @@ const initialState = [
         id: 'f4992e98-17f0-4e48-8a08-1e410cd3aaca',
         name: 'David Lai',
         phoneNumber: '6471230000',
-        rules: []
+        rules: [
+            {
+                type: 'location',
+                coords: {
+                    latitude: 43,
+                    longitude: -79
+                },
+                radius: 1
+            }
+        ]
     },
     {
         id: '6f57d3de-6d72-4afa-9a99-ca130584d205',

@@ -1,6 +1,9 @@
 const initialState = {
-    lastPosition: null
-}
+    lastPosition: {
+        latitude: 43,
+        longitude: -79
+    }
+};
 
 function location(state = initialState, action) {
     switch (action.type) {
