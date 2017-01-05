@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {Scene, Router, ActionConst} from 'react-native-router-flux';
 import {MenuContext} from 'react-native-popup-menu';
 
@@ -11,6 +12,26 @@ import AddRuleContainer from './AddRule/AddRuleContainer';
 import mdStyle from '../styles/material-design';
 
 class App extends Component {
+
+    watchID: ?number = null;
+
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                this.props.updateLocation(position.coords);
+            },
+            (error) => console.log(error),
+            {enableHighAccuracy: true, timeout: 5000, maximumAge: 1000}
+        );
+        this.watchID = navigator.geolocation.watchPosition((position) => {
+            this.props.updateLocation(position.coords);
+        });
+    }
+
+    componentWillUnmount() {
+        navigator.geolocation.clearWatch(this.watchID);
+    }
+
     render() {
         return (
             <MenuContext>
@@ -30,4 +51,11 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+    updateLocation: (pos) => dispatch({type: 'UPDATE_LOCATION', payload: pos})
+});
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(App);
