@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Scene, Router, ActionConst} from 'react-native-router-flux';
 import {MenuContext} from 'react-native-popup-menu';
+import AndroidSMS from 'react-native-sms-android'
 
 import SplashScreenComponent from './SplashScreen/SplashScreenComponent';
 import DashboardContainer from './Dashboard/DashboardContainer';
@@ -15,6 +16,27 @@ class App extends Component {
 
     watchID: ?number = null;
 
+    sendTexts(location) {
+        for (let contact of this.props.contacts) {
+            for (let rule of contact.rules) {
+                if (rule.type === 'location') {
+                    // AndroidSMS.sms(
+                    //     contact.phoneNumber,
+                    //     rule.text,
+                    //     'sendDirect',
+                    //     (err, message) => {
+                    //         if (err){
+                    //             console.log("error");
+                    //         } else {
+                    //             console.log(message);
+                    //         }
+                    //     }
+                    // )
+                }
+            }
+        }
+    }
+
     componentDidMount() {
         navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -25,6 +47,7 @@ class App extends Component {
         );
         this.watchID = navigator.geolocation.watchPosition((position) => {
             this.props.updateLocation(position.coords);
+            this.sendTexts(position.coords);
         });
     }
 
@@ -51,11 +74,15 @@ class App extends Component {
     }
 }
 
+const mapStateToProps = state => ({
+   contacts: state.contacts
+});
+
 const mapDispatchToProps = dispatch => ({
     updateLocation: (pos) => dispatch({type: 'UPDATE_LOCATION', payload: pos})
 });
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(App);
